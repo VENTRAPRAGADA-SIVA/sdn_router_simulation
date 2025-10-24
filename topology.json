@@ -1,0 +1,127 @@
+{
+  "nodes": [
+    "h1",
+    "h2",
+    "h3",
+    "s1",
+    "s2",
+    "r1",
+    "r2"
+  ],
+  "links": [
+    {
+      "id": "L1",
+      "a": "h1",
+      "b": "s1",
+      "capacity": 100,
+      "available_bw": 34
+    },
+    {
+      "id": "L2",
+      "a": "s1",
+      "b": "r1",
+      "capacity": 100,
+      "available_bw": 17
+    },
+    {
+      "id": "L3",
+      "a": "r1",
+      "b": "s2",
+      "capacity": 100,
+      "available_bw": 21
+    },
+    {
+      "id": "L4",
+      "a": "s2",
+      "b": "h2",
+      "capacity": 100,
+      "available_bw": 64
+    },
+    {
+      "id": "L5",
+      "a": "h3",
+      "b": "r2",
+      "capacity": 100,
+      "available_bw": 17
+    },
+    {
+      "id": "L6",
+      "a": "r2",
+      "b": "s2",
+      "capacity": 100,
+      "available_bw": 5
+    }
+  ],
+  "paths": {
+    "h1-h2": [
+      {
+        "links": [
+          {
+            "id": "L1",
+            "available_bw": 100
+          },
+          {
+            "id": "L2",
+            "available_bw": 80
+          },
+          {
+            "id": "L3",
+            "available_bw": 60
+          },
+          {
+            "id": "L4",
+            "available_bw": 100
+          }
+        ]
+      },
+      {
+        "links": [
+          {
+            "id": "L1",
+            "available_bw": 100
+          },
+          {
+            "id": "L2",
+            "available_bw": 50
+          },
+          {
+            "id": "L3",
+            "available_bw": 40
+          },
+          {
+            "id": "L4",
+            "available_bw": 100
+          }
+        ]
+      }
+    ],
+    "h3-h2": [
+      {
+        "links": [
+          {
+            "id": "L5",
+            "available_bw": 50
+          },
+          {
+            "id": "L6",
+            "available_bw": 30
+          },
+          {
+            "id": "L4",
+            "available_bw": 100
+          }
+        ]
+      }
+    ]
+  },
+  "flows": [
+    {
+      "src": "h1",
+      "dst": "h2"
+    },
+    {
+      "src": "h3",
+      "dst": "h2"
+    }
+  ]
+}
